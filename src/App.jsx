@@ -1,16 +1,21 @@
-// import { Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 
 import Home from './pages/Home';
+import SearchFilms from 'pages/SearchFilms';
+import NotFound from 'pages/NotFound';
 
 export const App = () => {
   return (
     <div>
-      <Home />
-      {/* <Routes>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/movies">Movies</Link>
+      </nav>
+      <Routes>
         <Route path="/" element={<Home />} />
-      
-      </Routes> */}
-      React homework template
+        <Route path="/movies" element={<SearchFilms />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 };
