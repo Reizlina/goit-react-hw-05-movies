@@ -1,17 +1,19 @@
 import { NavLink, Outlet } from 'react-router-dom';
 
+import s from './Layout.module.css';
+
 const getActiveStyle = ({ isActive }) => {
-  return isActive ? { color: 'darkred' } : { color: 'darkblue' };
+  return isActive ? { color: 'darkred' } : { color: 'grey' };
 };
 
 export default function Layout() {
   return (
     <>
-      <nav>
-        <NavLink style={getActiveStyle} to="/home">
+      <nav className={s.nav}>
+        <NavLink className={s.link} style={getActiveStyle} to="/home">
           Home
         </NavLink>
-        <NavLink style={getActiveStyle} to="/movies">
+        <NavLink className={s.link} style={getActiveStyle} to="/movies">
           Movies
         </NavLink>
       </nav>

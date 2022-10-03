@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import Layout from 'components/Layout';
 import Home from './pages/Home';
@@ -7,14 +7,14 @@ import About from 'pages/About';
 import NotFound from 'pages/NotFound';
 import Cast from 'components/Cast';
 import Reviews from 'components/Reviews';
-// import { useEffect, useNavigate } from 'react';
+import { useEffect } from 'react';
 
 export const App = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   navigate('/home');
-  // }, []);
+  useEffect(() => {
+    navigate('/home');
+  }, []);
 
   return (
     <div>

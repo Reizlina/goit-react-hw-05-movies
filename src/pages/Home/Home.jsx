@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getTrendingFilms } from '../../api/Api';
+import s from './Home.module.css';
 
 import FilmList from 'components/FilmList';
 import Loader from 'components/Loader';
@@ -17,7 +18,6 @@ export default function Home() {
     setLoading(true);
     try {
       const data = await getTrendingFilms();
-      // console.log(data);
       setMovies(data.results);
     } catch (error) {
       console.log(error);
@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <>
-      <h1>Trending today</h1>
+      <h1 className={s.title}>Trending today</h1>
       <FilmList movies={movies} />
       {loading && <Loader />}
     </>

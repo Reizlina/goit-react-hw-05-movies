@@ -1,0 +1,9 @@
+.nav {
+  padding: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.link {
+  margin-right: 20px;
+  font-size: 23px;
+}
