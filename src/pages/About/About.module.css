@@ -1,0 +1,9 @@
+.wrap {
+  display: flex;
+  padding: 20px;
+}
+
+.info {
+  padding: 0 20px;
+  max-width: 800px;
+}
