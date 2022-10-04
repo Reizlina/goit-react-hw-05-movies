@@ -19,8 +19,8 @@ export default function SearchFilms() {
   useEffect(() => {
     if (find) {
       fetchFilms(find);
-      // eslint-disable-next-line
     }
+    // eslint-disable-next-line
   }, [find]);
 
   const fetchFilms = async find => {
