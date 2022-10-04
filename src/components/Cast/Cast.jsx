@@ -53,11 +53,15 @@ const Cast = () => {
   );
 
   return (
-    <ul className={s.list}>
+    <>
       {loading && <Loader />}
       {error && <h2>Oops, something went wrong...</h2>}
-      {filmNames}
-    </ul>
+      {castInfo.length ? (
+        <ul className={s.list}>{filmNames}</ul>
+      ) : (
+        <p className={s.text}>We don't have any actors for this movie</p>
+      )}
+    </>
   );
 };
 export default Cast;

@@ -3,3 +3,8 @@
   color: rgb(84, 84, 84);
   font-weight: 600;
 }
+
+.text {
+  padding: 20px;
+  margin: 0;
+}

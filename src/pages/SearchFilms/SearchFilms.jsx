@@ -3,6 +3,7 @@ import { Outlet, useSearchParams } from 'react-router-dom';
 
 import { getSearchFilms } from '../../api/Api';
 import s from './SearchFilms.module.css';
+import Notiflix from 'notiflix';
 
 import FilmList from 'components/FilmList';
 import Loader from 'components/Loader';
@@ -25,6 +26,12 @@ export default function SearchFilms() {
     setLoading(true);
     try {
       const data = await getSearchFilms(find.toLowerCase());
+      if (!data.results.length) {
+        setSearchParams('');
+        setMovies([]);
+        Notiflix.Notify.failure('Invalid request');
+        return;
+      }
       setMovies(data.results);
     } catch (error) {
       console.log(error);
@@ -39,9 +46,12 @@ export default function SearchFilms() {
     const value = e.target.elements.search.value;
     setSearchParams(value !== '' ? { find: value } : {});
     const form = e.currentTarget;
-    find = '';
+    // find = '';
     form.reset();
   };
+
+  console.log('find', find);
+  // console.log('movies', movies);
 
   return (
     <div>
