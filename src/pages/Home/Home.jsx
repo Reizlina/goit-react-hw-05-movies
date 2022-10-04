@@ -32,6 +32,7 @@ export default function Home() {
       <h1 className={s.title}>Trending today</h1>
       <FilmList movies={movies} />
       {loading && <Loader />}
+      {error && <h2>Oops, something went wrong...</h2>}
     </>
   );
 }

@@ -1,5 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 
+import Loader from 'components/Loader';
 import s from './Layout.module.css';
 
 const getActiveStyle = ({ isActive }) => {
@@ -17,7 +19,9 @@ export default function Layout() {
           Movies
         </NavLink>
       </nav>
-      <Outlet />
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </>
   );
 }

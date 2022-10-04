@@ -9,7 +9,6 @@ import Loader from 'components/Loader';
 
 const Cast = () => {
   const [castInfo, setCastInfo] = useState([]);
-
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -54,6 +53,7 @@ const Cast = () => {
   return (
     <ul className={s.list}>
       {loading && <Loader />}
+      {error && <h2>Oops, something went wrong...</h2>}
       {filmNames}
     </ul>
   );

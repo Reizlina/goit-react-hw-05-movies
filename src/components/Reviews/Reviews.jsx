@@ -43,6 +43,7 @@ const Reviews = () => {
   return (
     <>
       {loading && <Loader />}
+      {error && <h2>Oops, something went wrong...</h2>}
       {reviews.length ? (
         <ul>{filmReviews}</ul>
       ) : (

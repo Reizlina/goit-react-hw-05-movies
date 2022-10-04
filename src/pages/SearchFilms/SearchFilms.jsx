@@ -61,6 +61,7 @@ export default function SearchFilms() {
       </form>
       {movies.length > 0 && <FilmList movies={movies} />}
       {loading && <Loader />}
+      {error && <h2>Oops, something went wrong...</h2>}
       <Outlet />
     </div>
   );

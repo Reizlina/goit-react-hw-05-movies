@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import s from './FilmInfo.module.css';
 
 const FilmInfo = ({
@@ -33,3 +35,13 @@ const FilmInfo = ({
   );
 };
 export default FilmInfo;
+
+FilmInfo.propTypes = {
+  posterPath: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  releaseDate: PropTypes.string.isRequired,
+  voteAverage: PropTypes.number.isRequired,
+  overview: PropTypes.string.isRequired,
+  filmGenres: PropTypes.string.isRequired,
+  poster: PropTypes.string.isRequired,
+};

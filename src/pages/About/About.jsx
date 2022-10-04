@@ -45,9 +45,10 @@ const About = () => {
 
   return (
     <>
-      <Button location={location.state?.from} navigater={navigate} />
+      <Button location={location.state?.from} navigate={navigate} />
 
       {loading && <Loader />}
+      {error && <h2>Oops, something went wrong...</h2>}
       <FilmInfo
         posterPath={poster_path}
         title={title}

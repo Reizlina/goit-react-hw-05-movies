@@ -11,7 +11,7 @@ const AdditionalInfo = () => {
         <ul className={s.list}>
           <li>
             <Link
-              to={'cast'}
+              to="cast"
               state={{ from: location.state?.from }}
               className={s.link}
             >
@@ -20,7 +20,7 @@ const AdditionalInfo = () => {
           </li>
           <li>
             <Link
-              to={'reviews'}
+              to="reviews"
               state={{ from: location.state?.from }}
               className={s.link}
             >

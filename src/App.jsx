@@ -1,33 +1,33 @@
 import { Routes, Route, useNavigate } from 'react-router-dom';
+import { lazy, useEffect } from 'react';
 
 import Layout from 'components/Layout';
-import Home from './pages/Home';
-import SearchFilms from 'pages/SearchFilms';
-import About from 'pages/About';
-import NotFound from 'pages/NotFound';
-import Cast from 'components/Cast';
-import Reviews from 'components/Reviews';
-import { useEffect, lazy, Suspense } from 'react';
+// import NotFound from 'pages/NotFound';
+
+const Home = lazy(() => import('./pages/Home/Home'));
+const SearchFilms = lazy(() => import('./pages/SearchFilms/SearchFilms'));
+const About = lazy(() => import('./pages/About/About'));
+const Cast = lazy(() => import('./components/Cast/Cast'));
+const Reviews = lazy(() => import('./components/Reviews/Reviews'));
 
 export const App = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  useEffect(() => {
-    navigate('/home');
-  }, []);
+  // useEffect(() => {
+  //   navigate('/home');
+  // }, []);
 
   return (
     <div>
-      {/* <Suspense></Suspense> */}
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/home" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="/movies" element={<SearchFilms />} />
           <Route path="/movies/:id" element={<About />}>
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<Home />} />
         </Route>
       </Routes>
     </div>
