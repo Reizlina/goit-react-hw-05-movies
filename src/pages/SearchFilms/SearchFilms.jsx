@@ -19,6 +19,7 @@ export default function SearchFilms() {
   useEffect(() => {
     if (find) {
       fetchFilms(find);
+      // eslint-disable-next-line
     }
   }, [find]);
 
@@ -46,12 +47,8 @@ export default function SearchFilms() {
     const value = e.target.elements.search.value;
     setSearchParams(value !== '' ? { find: value } : {});
     const form = e.currentTarget;
-    // find = '';
     form.reset();
   };
-
-  console.log('find', find);
-  // console.log('movies', movies);
 
   return (
     <div>
