@@ -1,0 +1,21 @@
+.more_info {
+  padding: 20px;
+  border-bottom: 1px solid grey;
+  color: rgb(84, 84, 84);
+}
+
+.list {
+  list-style: circle;
+}
+
+.link {
+  font-weight: 700;
+  transition: 400ms;
+  outline: none;
+  text-decoration: none;
+  color: rgb(84, 84, 84);
+}
+
+.link:hover {
+  color: darkred;
+}

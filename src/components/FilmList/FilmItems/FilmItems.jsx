@@ -4,7 +4,7 @@ const FilmItems = ({ name, title, id }) => {
   const navigate = useLocation();
   return (
     <li>
-      <Link to={`/movies/${id}`} state={{ from: navigate }}>
+      <Link to={`/movies/${id}`} state={{ from: navigate.pathname }}>
         {title || name}
       </Link>
     </li>

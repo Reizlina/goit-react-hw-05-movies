@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 
 import { getInfoCast } from 'api/Api';
 
+import s from './Cast.module.css';
+
 import Loader from 'components/Loader';
 
 const Cast = () => {
@@ -50,7 +52,7 @@ const Cast = () => {
   );
 
   return (
-    <ul>
+    <ul className={s.list}>
       {loading && <Loader />}
       {filmNames}
     </ul>

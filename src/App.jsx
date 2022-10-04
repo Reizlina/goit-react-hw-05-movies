@@ -7,7 +7,7 @@ import About from 'pages/About';
 import NotFound from 'pages/NotFound';
 import Cast from 'components/Cast';
 import Reviews from 'components/Reviews';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 
 export const App = () => {
   const navigate = useNavigate();
@@ -18,6 +18,7 @@ export const App = () => {
 
   return (
     <div>
+      {/* <Suspense></Suspense> */}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/home" element={<Home />} />

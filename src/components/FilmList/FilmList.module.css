@@ -1,0 +1,19 @@
+.list {
+  list-style: circle;
+}
+
+.list li {
+  margin-bottom: 5px;
+}
+
+.list a {
+  outline: none;
+  text-decoration: none;
+  color: rgb(84, 84, 84);
+  font-weight: 700;
+  transition: 400ms;
+}
+
+.list a:hover {
+  color: darkred;
+}

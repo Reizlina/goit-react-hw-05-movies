@@ -13,7 +13,8 @@ export default function SearchFilms() {
   const [error, setError] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const find = searchParams.get('find') ?? '';
+  let find = searchParams.get('find') ?? '';
+  // console.log('find', find);
 
   useEffect(() => {
     if (find) {
@@ -38,9 +39,10 @@ export default function SearchFilms() {
     e.preventDefault();
     const value = e.target.elements.search.value;
     setSearchParams(value !== '' ? { find: value } : {});
+    const form = e.currentTarget;
+    find = '';
+    form.reset();
   };
-
-  // console.log(movies);
 
   return (
     <div>
@@ -52,9 +54,7 @@ export default function SearchFilms() {
             type="text"
             name="search"
             autoFocus
-            autoComplete="off"
             required
-            width="300"
           />
           <button className={s.btn}>Search</button>
         </div>
