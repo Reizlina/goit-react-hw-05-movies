@@ -3,11 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const FilmItems = ({ title, id }) => {
-  const navigate = useLocation();
+  const location = useLocation();
 
   return (
     <li>
-      <Link to={`/movies/${id}`} state={{ from: navigate }}>
+      <Link to={`/movies/${id}`} state={{ from: location }}>
         {title}
       </Link>
     </li>
