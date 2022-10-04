@@ -14,6 +14,7 @@ const FilmInfo = ({
   return (
     <div className={s.wrap}>
       <img
+        alt={title}
         src={
           posterPath
             ? poster

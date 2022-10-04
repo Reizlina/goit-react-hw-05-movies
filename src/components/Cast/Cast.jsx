@@ -16,6 +16,7 @@ const Cast = () => {
 
   useEffect(() => {
     fetchFilms();
+    // eslint-disable-next-line
   }, []);
 
   const fetchFilms = async () => {
@@ -36,6 +37,7 @@ const Cast = () => {
       return (
         <li key={cast_id}>
           <img
+            alt={name}
             src={
               profile_path
                 ? `https://image.tmdb.org/t/p/w500${profile_path}`

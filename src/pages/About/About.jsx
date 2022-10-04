@@ -20,6 +20,7 @@ const About = () => {
 
   useEffect(() => {
     fetchFilms();
+    // eslint-disable-next-line
   }, []);
 
   const fetchFilms = async () => {

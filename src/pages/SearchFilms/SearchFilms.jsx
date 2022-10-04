@@ -14,7 +14,6 @@ export default function SearchFilms() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   let find = searchParams.get('find') ?? '';
-  // console.log('find', find);
 
   useEffect(() => {
     if (find) {
