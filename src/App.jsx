@@ -1,5 +1,5 @@
-import { Routes, Route, useNavigate } from 'react-router-dom';
-import { lazy, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { lazy } from 'react';
 
 import Layout from 'components/Layout';
 // import NotFound from 'pages/NotFound';
