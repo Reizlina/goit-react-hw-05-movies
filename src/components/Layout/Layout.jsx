@@ -15,7 +15,7 @@ export default function Layout() {
         <NavLink end className={s.link} style={getActiveStyle} to="/">
           Home
         </NavLink>
-        <NavLink end className={s.link} style={getActiveStyle} to="/movies">
+        <NavLink className={s.link} style={getActiveStyle} to="/movies">
           Movies
         </NavLink>
       </nav>
