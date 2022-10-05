@@ -12,10 +12,10 @@ export default function Layout() {
   return (
     <>
       <nav className={s.nav}>
-        <NavLink className={s.link} style={getActiveStyle} to="/home">
+        <NavLink end className={s.link} style={getActiveStyle} to="/">
           Home
         </NavLink>
-        <NavLink className={s.link} style={getActiveStyle} to="/movies">
+        <NavLink end className={s.link} style={getActiveStyle} to="/movies">
           Movies
         </NavLink>
       </nav>
